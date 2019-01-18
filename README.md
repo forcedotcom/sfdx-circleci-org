@@ -13,7 +13,7 @@ If any any of these assumptions aren't true, the following steps won't work.
 ## Getting Started
 1) [Fork](http://help.github.com/fork-a-repo/) this repo into your github account using the fork link at the top of the page.
 
-2) Clone your forked repo locally: `git clone https://github.com/<git_username>/sfdx-circleci.git`
+2) Clone your forked repo locally: `git clone https://github.com/<git_username>/sfdx-circleci-org.git`
 
 3) Make sure you have the Salesforce CLI installed. Check by running `sfdx force --help` and confirm you see the command output. If you don't have it installed you can download and install it from [here](https://developer.salesforce.com/tools/sfdxcli).
 
