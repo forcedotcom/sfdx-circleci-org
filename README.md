@@ -1,4 +1,4 @@
-# sfdx-circleci 
+# sfdx-circleci-org 
 [![CircleCI](https://circleci.com/gh/forcedotcom/sfdx-circleci-org.svg?style=svg)](https://circleci.com/gh/forcedotcom/sfdx-circleci-org)
 
 Coming Soon --- For a fully guided walk through of setting up and configuring this sample, see the [Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/modules/sfdx_travis_ci) Trailhead module.
