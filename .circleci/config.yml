@@ -21,12 +21,12 @@ jobs:
       - run:
           name: Download CLI
           command: |
-            # Download cli
+            # Download Salesforce CLI
             wget -qO- $DX_CLI_URL | tar xJ -C sfdx --strip-components 1
       - run:
           name: Install CLI
           command: |
-            # Install the cli
+            # Install Salesforce CLI
             ./sfdx/install
             sfdx
       - run:
@@ -42,8 +42,8 @@ jobs:
       - run:
           name: Deploy to Target Deployment Org
           command: |
-            #Deploy to target deployment org and run unit tests. 
+            #Deploy to target org and run unit tests 
             sfdx force:mdapi:deploy --wait 10 --deploydir $DEPLOYDIR --targetusername UAT --testlevel $TESTLEVEL
             
-            #Example shows how to run a check only deploy.
+            #Example shows how to run a check-only deploy
             #sfdx force:mdapi:deploy --checkonly --wait 10 --deploydir $DEPLOYDIR --targetusername UAT --testlevel $TESTLEVEL
