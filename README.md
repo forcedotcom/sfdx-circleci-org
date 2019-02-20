@@ -16,7 +16,7 @@ We make a few assumptions in this README. Continue only if you have completed th
 
 2) Clone your forked repo locally: `git clone https://github.com/<git_username>/sfdx-circleci-org.git`
 
-3) Make sure you have Salesforce CLI installed. Check by running `sfdx force --help` and confirm you see the command output. If you don't have it installed, you can download and install it from [here](https://developer.salesforce.com/tools/sfdxcli).
+3) Make sure that you have Salesforce CLI installed. Run `sfdx force --help` and confirm you see the command output. If you don't have it installed, you can download and install it from [here](https://developer.salesforce.com/tools/sfdxcli).
 
 4) Set up a JWT-based auth flow for the target orgs that you want to deploy to. This step creates a `server.key` file that is used in subsequent steps.
 (https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_jwt_flow.htm)
@@ -47,7 +47,7 @@ openssl enc -nosalt -aes-256-cbc -in your_key_location/server.key -out assets/se
  
 - Store the `key`, and `iv` as protected environment variables in the CircleCI UI. These values are considered *secret* so please treat them as such.
 
-7) From your JWT-based connected app on Salesforce, retrieve the generated `Consumer Key` and store in a CircleCI environment variable named `CONSUMER_KEY` using the Circleci UI.
+7) From your JWT-based connected app on Salesforce, retrieve the generated `Consumer Key` and store it in a CircleCI environment variable named `CONSUMER_KEY` using the CircleCI UI.
 
 8) Store the user name that you use to access your target org in a CircleCI environment variable named `USER_NAME`. Note that this username is the username that you use to log in to your target org.
 
@@ -63,7 +63,7 @@ Enjoy!
 
 ## Contributing to the Repository ###
 
-If you find any issues or opportunities for improving this repository, fix them! Feel free to contribute to this project by [forking](http://help.github.com/fork-a-repo/) this repository and making changes to the content. Once you've made your changes, share them back with the community by sending a pull request. Please see [How to send pull requests](http://help.github.com/send-pull-requests/) for more information about contributing to GitHub projects.
+If you find any issues or opportunities for improving this repository, fix them! Feel free to contribute to this project by [forking](http://help.github.com/fork-a-repo/) this repository and making changes to the content. Once you've made your changes, share them back with the community by sending a pull request. See [How to send pull requests](http://help.github.com/send-pull-requests/) for more information about contributing to GitHub projects.
 
 ## Reporting Issues ###
 
