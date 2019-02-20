@@ -12,7 +12,7 @@ We make a few assumptions in this README. Continue only if you have completed th
 - You have properly set up the JWT-Based authorization flow (headless). We recommend using [these steps for generating your Self-Signed SSL Certificate](https://devcenter.heroku.com/articles/ssl-certificate-self). 
 
 ## Getting Started
-1) [Fork](http://help.github.com/fork-a-repo/) this repo into your GitHub account using the fork link at the top of the page.
+1) [Fork](http://help.github.com/fork-a-repo/) this repo in to your GitHub account using the fork link at the top of the page.
 
 2) Clone your forked repo locally: `git clone https://github.com/<git_username>/sfdx-circleci-org.git`
 
