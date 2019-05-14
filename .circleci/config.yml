@@ -1,11 +1,8 @@
 version: 2
-
-# Defining default values for all jobs
-defaults: &defaults
-  docker:
-    - image: circleci/node:lts-browsers
 jobs: 
   build: 
+    docker:
+      - image: circleci/node:8.9.4
     environment:
       # from https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli_standalone.htm
       # and https://developer.salesforce.com/media/salesforce-cli/manifest.json
