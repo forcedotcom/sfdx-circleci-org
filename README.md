@@ -1,5 +1,5 @@
 # sfdx-circleci-org 
-[![CircleCI](https://circleci.com/gh/forcedotcom/sfdx-circleci-org.svg?style=svg)](https://circleci.com/gh/forcedotcom/sfdx-circleci-org)
+[![CircleCI](https://circleci.com/gh/Torsen/sfdx-circleci-org.svg?style=svg)](https://circleci.com/gh/Torsen/sfdx-circleci-org)
 
 Coming Soon --- For a fully guided walkthrough of setting up and configuring continuous integration using scratch orgs and Salesforce CLI, see the [Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/modules/sfdx_travis_ci) Trailhead module.
 
