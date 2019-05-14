@@ -38,7 +38,7 @@ jobs:
           name: Authorize Target Deployment Org
           command: |
             #Authorize target org
-            sfdx force:auth:jwt:grant --instanceurl https://test.salesforce.com  --clientid $CONSUMER_KEY --jwtkeyfile assets/server.key --username $USER_NAME --setalias UAT
+            sfdx force:auth:jwt:grant --instanceurl https://login.salesforce.com  --clientid $CONSUMER_KEY --jwtkeyfile assets/server.key --username $USER_NAME --setalias UAT
       - run:
           name: Deploy to Target Deployment Org
           command: |
