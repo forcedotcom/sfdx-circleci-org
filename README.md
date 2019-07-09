@@ -1,6 +1,7 @@
 # sfdx-circleci-org 
 [![CircleCI](https://circleci.com/gh/forcedotcom/sfdx-circleci-org.svg?style=svg)](https://circleci.com/gh/forcedotcom/sfdx-circleci-org)
 
+
 Coming Soon --- For a fully guided walkthrough of setting up and configuring continuous integration using scratch orgs and Salesforce CLI, see the [Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/modules/sfdx_travis_ci) Trailhead module.
 
 This repository shows how to successfully set up deploying to non-scratch orgs (sandbox or production) with CircleCI. 
@@ -51,11 +52,13 @@ openssl enc -nosalt -aes-256-cbc -in your_key_location/server.key -out assets/se
 
 8) Store the user name that you use to access your target org in a CircleCI environment variable named `USER_NAME`. Note that this username is the username that you use to log in to your target org.
 
-9) Store the `key` and `iv` values in CircleCI environment variables named `DECRYPTION_KEY` and `DECRYPTION_IV`, respectively.  When finished setting environment variables, the environment variables setup screen should look like the one below.
+9) Store the endpoint that you use to login your target org in a CircleCI environment variable named `ENDPOINT`. Note that this endpoint is the endpoint that you use to log in to your target org.
+
+10) Store the `key` and `iv` values in CircleCI environment variables named `DECRYPTION_KEY` and `DECRYPTION_IV`, respectively.  When finished setting environment variables, the environment variables setup screen should look like the one below.
 
 ![alt text](assets/images/Circleci-variables.png)
 
-10) Commit the updated `server.key.enc` file.
+11) Commit the updated `server.key.enc` file.
 
 Now you're ready to go! When you commit and push a change, your change kicks off a CircleCI build.
 
