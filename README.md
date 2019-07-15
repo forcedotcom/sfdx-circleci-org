@@ -1,16 +1,16 @@
-# sfdx-circleci-org 
+# sfdx-circleci-org
 [![CircleCI](https://circleci.com/gh/forcedotcom/sfdx-circleci-org.svg?style=svg)](https://circleci.com/gh/forcedotcom/sfdx-circleci-org)
 
 
 Coming Soon --- For a fully guided walkthrough of setting up and configuring continuous integration using scratch orgs and Salesforce CLI, see the [Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/modules/sfdx_travis_ci) Trailhead module.
 
-This repository shows how to successfully set up deploying to non-scratch orgs (sandbox or production) with CircleCI. 
+This repository shows how to successfully set up deploying to non-scratch orgs (sandbox or production) with CircleCI.
 
 ## Before You Begin
 We make a few assumptions in this README. Continue only if you have completed these critical configuration prerequisites.
 
 - You know how to set up your GitHub repository with CircleCI. (Need help? See the CircleCI [Getting Started guide](https://circleci.com/docs/2.0/).)
-- You have properly set up the JWT-Based authorization flow (headless). We recommend using [these steps for generating your Self-Signed SSL Certificate](https://devcenter.heroku.com/articles/ssl-certificate-self). 
+- You have properly set up the JWT-Based authorization flow (headless). We recommend using [these steps for generating your Self-Signed SSL Certificate](https://devcenter.heroku.com/articles/ssl-certificate-self).
 
 ## Getting Started
 1) [Fork](http://help.github.com/fork-a-repo/) this repo in to your GitHub account using the fork link at the top of the page.
@@ -45,7 +45,7 @@ $ openssl enc -aes-256-cbc -k <passphrase here> -P -md sha1 -nosalt
 openssl enc -nosalt -aes-256-cbc -in your_key_location/server.key -out assets/server.key.enc -base64 -K <key from above> -iv <iv from above>
 ```
  This command replaces the existing `server.key.enc` with your encrypted version.
- 
+
 - Store the `key`, and `iv` as protected environment variables in the CircleCI UI. These values are considered *secret* so please treat them as such.
 
 7) From your JWT-based connected app on Salesforce, retrieve the generated `Consumer Key` and store it in a CircleCI environment variable named `CONSUMER_KEY` using the CircleCI UI.
@@ -66,7 +66,7 @@ Enjoy!
 
 ## Contributing to the Repository ###
 
-If you find any issues or opportunities for improving this repository, fix them! Feel free to contribute to this project by [forking](http://help.github.com/fork-a-repo/) this repository and making changes to the content. Once you've made your changes, share them back with the community by sending a pull request. See [How to send pull requests](http://help.github.com/send-pull-requests/) for more information about contributing to GitHub projects.
+If you find any issues or opportunities for improving this repository, fix them! Feel free to contribute to this project by [forking](https://help.github.com/fork-a-repo/) this repository and making changes to the content. Once you've made your changes, share them back with the community by sending a pull request. See [How to create pull requests](https://help.github.com/en/articles/creating-a-pull-request/) for more information about contributing to GitHub projects.
 
 ## Reporting Issues ###
 
