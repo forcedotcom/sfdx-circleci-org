@@ -7,8 +7,11 @@ node_modules
 .idea
 .tern-project
 .settings
+.vscode
 selenium-client-jars/
 test/artifacts
 assets/server.key
 assets/env-var-values.txt
 assets/server.key.hex
+temp*
+removed*
