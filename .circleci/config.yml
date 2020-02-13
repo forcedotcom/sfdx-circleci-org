@@ -1,6 +1,6 @@
 version: 2
-jobs: 
-  build: 
+jobs:
+  build:
     docker:
       - image: circleci/node:8.9.4
     environment:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Create SFDX Folder" 
+          name: "Create SFDX Folder"
           command: |
             # Create sfdx directory
             mkdir sfdx
@@ -35,6 +35,11 @@ jobs:
             #Decrypt server key
             openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
       - run:
+          name: Logout Target Deployment Org
+          command: |
+            #Logout of target org
+            sfdx force:auth:logout --targetusername $USER_NAME -p
+      - run:
           name: Authorize Target Deployment Org
           command: |
             #Authorize target org
@@ -42,8 +47,8 @@ jobs:
       - run:
           name: Deploy to Target Deployment Org
           command: |
-            #Deploy to target deployment org and run unit tests. 
+            #Deploy to target deployment org and run unit tests.
             sfdx force:mdapi:deploy --wait 10 --deploydir $DEPLOYDIR --targetusername UAT --testlevel $TESTLEVEL
-            
+
             #Example shows how to run a check only deploy.
             #sfdx force:mdapi:deploy --checkonly --wait 10 --deploydir $DEPLOYDIR --targetusername UAT --testlevel $TESTLEVEL
