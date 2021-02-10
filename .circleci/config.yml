@@ -2,7 +2,7 @@ version: 2
 jobs: 
   build: 
     docker:
-      - image: circleci/node:8.9.4
+      - image: circleci/node:lts
     environment:
       # from https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli_standalone.htm
       # and https://developer.salesforce.com/media/salesforce-cli/manifest.json
