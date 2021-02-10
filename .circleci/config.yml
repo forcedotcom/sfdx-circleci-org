@@ -12,6 +12,9 @@ jobs:
       - TESTLEVEL: RunLocalTests
       - DEPLOYDIR: src
     steps:
+      - add_ssh_keys:
+            fingerprints:
+              - "81:51:b1:3e:1b:56:2b:f2:54:79:42:cf:9c:dd:1a:41"
       - checkout
       - run:
           name: "Create SFDX Folder" 
