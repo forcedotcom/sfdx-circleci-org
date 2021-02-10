@@ -33,7 +33,7 @@ jobs:
           name: Decrypt server key
           command: |
             #Decrypt server key
-            openssl version
+            openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
       - run:
           name: Authorize Target Deployment Org
           command: |
