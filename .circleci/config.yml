@@ -4,8 +4,8 @@ jobs:
     docker:
       - image: circleci/node:lts
     environment:
-      # from https://developer.salesforce.com/tools/sfdxcli
       # Variables used in build steps
+      # from https://developer.salesforce.com/tools/sfdxcli
       - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-amd64.tar.xz
       - TESTLEVEL: RunLocalTests
       - DEPLOYDIR: src
