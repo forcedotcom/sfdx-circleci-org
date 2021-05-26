@@ -4,11 +4,9 @@ jobs:
     docker:
       - image: circleci/node:lts
     environment:
-      # from https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli_standalone.htm
-      # and https://developer.salesforce.com/media/salesforce-cli/manifest.json
-
+      # from https://developer.salesforce.com/tools/sfdxcli
       # Variables used in build steps
-      - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+      - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-amd64.tar.xz
       - TESTLEVEL: RunLocalTests
       - DEPLOYDIR: src
     steps:
